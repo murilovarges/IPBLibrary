@@ -11,7 +11,7 @@ namespace IPBLibrary.App.RegisterForms
         public FormCategory()
         {
             InitializeComponent();
-            _categoryRepository = new Repository<Category>("categories.json");
+            _categoryRepository = new Repository<Category>("data/categories.json");
         }
 
         protected override void Save()

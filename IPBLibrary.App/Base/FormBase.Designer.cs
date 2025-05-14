@@ -31,7 +31,7 @@
             tabControlRegister = new ReaLTaiizor.Controls.MaterialTabControl();
             tabPageRegister = new TabPage();
             txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            panel1 = new Panel();
+            pnlButtons = new Panel();
             btnCancel = new ReaLTaiizor.Controls.MaterialButton();
             btnSave = new ReaLTaiizor.Controls.MaterialButton();
             tabPageList = new TabPage();
@@ -41,7 +41,7 @@
             btnNew = new ReaLTaiizor.Controls.MaterialButton();
             tabControlRegister.SuspendLayout();
             tabPageRegister.SuspendLayout();
-            panel1.SuspendLayout();
+            pnlButtons.SuspendLayout();
             tabPageList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRegister).BeginInit();
             SuspendLayout();
@@ -63,7 +63,7 @@
             // tabPageRegister
             // 
             tabPageRegister.Controls.Add(txtId);
-            tabPageRegister.Controls.Add(panel1);
+            tabPageRegister.Controls.Add(pnlButtons);
             tabPageRegister.Location = new Point(4, 29);
             tabPageRegister.Name = "tabPageRegister";
             tabPageRegister.Padding = new Padding(3);
@@ -103,15 +103,15 @@
             txtId.TrailingIcon = null;
             txtId.UseSystemPasswordChar = false;
             // 
-            // panel1
+            // pnlButtons
             // 
-            panel1.Controls.Add(btnCancel);
-            panel1.Controls.Add(btnSave);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(3, 255);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(578, 45);
-            panel1.TabIndex = 1;
+            pnlButtons.Controls.Add(btnCancel);
+            pnlButtons.Controls.Add(btnSave);
+            pnlButtons.Dock = DockStyle.Bottom;
+            pnlButtons.Location = new Point(3, 255);
+            pnlButtons.Name = "pnlButtons";
+            pnlButtons.Size = new Size(578, 45);
+            pnlButtons.TabIndex = 1;
             // 
             // btnCancel
             // 
@@ -168,7 +168,7 @@
             tabPageList.Padding = new Padding(3);
             tabPageList.Size = new Size(584, 303);
             tabPageList.TabIndex = 1;
-            tabPageList.Text = "Listing";
+            tabPageList.Text = "List";
             tabPageList.UseVisualStyleBackColor = true;
             tabPageList.Enter += tabPageList_Enter;
             // 
@@ -267,8 +267,8 @@
             Text = "FormBase";
             tabControlRegister.ResumeLayout(false);
             tabPageRegister.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlButtons.ResumeLayout(false);
+            pnlButtons.PerformLayout();
             tabPageList.ResumeLayout(false);
             tabPageList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRegister).EndInit();
@@ -279,7 +279,7 @@
         private ReaLTaiizor.Controls.MaterialButton btnDelete;
         private ReaLTaiizor.Controls.MaterialButton btnNew;
         protected TabPage tabPageRegister;
-        private Panel panel1;
+        private Panel pnlButtons;
         private ReaLTaiizor.Controls.MaterialButton btnCancel;
         private ReaLTaiizor.Controls.MaterialButton btnSave;
         protected DataGridView dataGridViewRegister;

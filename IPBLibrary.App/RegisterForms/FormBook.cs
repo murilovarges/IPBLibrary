@@ -14,9 +14,9 @@ namespace IPBLibrary.App.RegisterForms
         public FormBook()
         {
             InitializeComponent();
-            _categoryRepository = new Repository<Category>("categories.json");
-            _authorRepository = new Repository<Author>("authors.json");
-            _bookRepository = new Repository<Book>("books.json");
+            _categoryRepository = new Repository<Category>("data/categories.json");
+            _authorRepository = new Repository<Author>("data/authors.json");
+            _bookRepository = new Repository<Book>("data/books.json");
             PopulateComboBoxes();
         }
 

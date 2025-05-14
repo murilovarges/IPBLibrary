@@ -11,7 +11,7 @@ namespace IPBLibrary.App.RegisterForms
         public FormAuthor()
         {
             InitializeComponent();
-            _authorRepository = new Repository<Author>("authors.json");
+            _authorRepository = new Repository<Author>("data/authors.json");
         }
 
         protected override void Save()

@@ -33,7 +33,7 @@ namespace IPBLibrary.App
             statusStrip = new StatusStrip();
             lblUserName = new ToolStripStatusLabel();
             lblUserRole = new ToolStripStatusLabel();
-            menuStrip1 = new MenuStrip();
+            menuStrip = new MenuStrip();
             registerToolStripMenuItem = new ToolStripMenuItem();
             publisherToolStripMenuItem = new ToolStripMenuItem();
             authorToolStripMenuItem = new ToolStripMenuItem();
@@ -47,7 +47,7 @@ namespace IPBLibrary.App
             bookReservationToolStripMenuItem = new ToolStripMenuItem();
             fineToolStripMenuItem = new ToolStripMenuItem();
             statusStrip.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            menuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // statusStrip
@@ -72,15 +72,15 @@ namespace IPBLibrary.App
             lblUserRole.Size = new Size(39, 20);
             lblUserRole.Text = "Role";
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { registerToolStripMenuItem, operationsToolStripMenuItem });
-            menuStrip1.Location = new Point(3, 64);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(794, 28);
-            menuStrip1.TabIndex = 8;
-            menuStrip1.Text = "menuStrip1";
+            menuStrip.ImageScalingSize = new Size(20, 20);
+            menuStrip.Items.AddRange(new ToolStripItem[] { registerToolStripMenuItem, operationsToolStripMenuItem });
+            menuStrip.Location = new Point(3, 64);
+            menuStrip.Name = "menuStrip";
+            menuStrip.Size = new Size(794, 28);
+            menuStrip.TabIndex = 8;
+            menuStrip.Text = "menuStrip1";
             // 
             // registerToolStripMenuItem
             // 
@@ -92,47 +92,47 @@ namespace IPBLibrary.App
             // publisherToolStripMenuItem
             // 
             publisherToolStripMenuItem.Name = "publisherToolStripMenuItem";
-            publisherToolStripMenuItem.Size = new Size(224, 26);
+            publisherToolStripMenuItem.Size = new Size(190, 26);
             publisherToolStripMenuItem.Text = "&Publisher";
             publisherToolStripMenuItem.Click += publisherToolStripMenuItem_Click;
             // 
             // authorToolStripMenuItem
             // 
             authorToolStripMenuItem.Name = "authorToolStripMenuItem";
-            authorToolStripMenuItem.Size = new Size(224, 26);
+            authorToolStripMenuItem.Size = new Size(190, 26);
             authorToolStripMenuItem.Text = "&Author";
             authorToolStripMenuItem.Click += authorToolStripMenuItem_Click;
             // 
             // bookCategoryToolStripMenuItem
             // 
             bookCategoryToolStripMenuItem.Name = "bookCategoryToolStripMenuItem";
-            bookCategoryToolStripMenuItem.Size = new Size(224, 26);
+            bookCategoryToolStripMenuItem.Size = new Size(190, 26);
             bookCategoryToolStripMenuItem.Text = "Book &Category";
             bookCategoryToolStripMenuItem.Click += bookCategoryToolStripMenuItem_Click;
             // 
             // bookToolStripMenuItem
             // 
             bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            bookToolStripMenuItem.Size = new Size(224, 26);
+            bookToolStripMenuItem.Size = new Size(190, 26);
             bookToolStripMenuItem.Text = "&Book";
             bookToolStripMenuItem.Click += bookToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(221, 6);
+            toolStripMenuItem1.Size = new Size(187, 6);
             // 
             // memberToolStripMenuItem
             // 
             memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            memberToolStripMenuItem.Size = new Size(224, 26);
+            memberToolStripMenuItem.Size = new Size(190, 26);
             memberToolStripMenuItem.Text = "&Member";
             memberToolStripMenuItem.Click += memberToolStripMenuItem_Click;
             // 
             // librarianToolStripMenuItem
             // 
             librarianToolStripMenuItem.Name = "librarianToolStripMenuItem";
-            librarianToolStripMenuItem.Size = new Size(224, 26);
+            librarianToolStripMenuItem.Size = new Size(190, 26);
             librarianToolStripMenuItem.Text = "&Librarian";
             librarianToolStripMenuItem.Click += librarianToolStripMenuItem_Click;
             // 
@@ -146,20 +146,23 @@ namespace IPBLibrary.App
             // bookLoanToolStripMenuItem
             // 
             bookLoanToolStripMenuItem.Name = "bookLoanToolStripMenuItem";
-            bookLoanToolStripMenuItem.Size = new Size(207, 26);
+            bookLoanToolStripMenuItem.Size = new Size(224, 26);
             bookLoanToolStripMenuItem.Text = "Book Loan";
+            bookLoanToolStripMenuItem.Click += bookLoanToolStripMenuItem_Click;
             // 
             // bookReservationToolStripMenuItem
             // 
             bookReservationToolStripMenuItem.Name = "bookReservationToolStripMenuItem";
-            bookReservationToolStripMenuItem.Size = new Size(207, 26);
+            bookReservationToolStripMenuItem.Size = new Size(224, 26);
             bookReservationToolStripMenuItem.Text = "Book Reservation";
+            bookReservationToolStripMenuItem.Click += bookReservationToolStripMenuItem_Click;
             // 
             // fineToolStripMenuItem
             // 
             fineToolStripMenuItem.Name = "fineToolStripMenuItem";
-            fineToolStripMenuItem.Size = new Size(207, 26);
+            fineToolStripMenuItem.Size = new Size(224, 26);
             fineToolStripMenuItem.Text = "Fine";
+            fineToolStripMenuItem.Click += fineToolStripMenuItem_Click;
             // 
             // FormMain
             // 
@@ -169,17 +172,17 @@ namespace IPBLibrary.App
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(800, 450);
             Controls.Add(statusStrip);
-            Controls.Add(menuStrip1);
+            Controls.Add(menuStrip);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
-            MainMenuStrip = menuStrip1;
+            MainMenuStrip = menuStrip;
             Name = "FormMain";
             Text = "..:: IPB Library Software ::..";
             WindowState = FormWindowState.Maximized;
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            menuStrip.ResumeLayout(false);
+            menuStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,7 +191,7 @@ namespace IPBLibrary.App
 
         #endregion
         private StatusStrip statusStrip;
-        private MenuStrip menuStrip1;
+        private MenuStrip menuStrip;
         private ToolStripMenuItem registerToolStripMenuItem;
         private ToolStripMenuItem authorToolStripMenuItem;
         private ToolStripMenuItem bookCategoryToolStripMenuItem;

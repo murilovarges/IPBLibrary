@@ -11,7 +11,7 @@ namespace IPBLibrary.App.RegisterForms
         public FormMember()
         {
             InitializeComponent();
-            _memberRepository = new Repository<Member>("members.json");
+            _memberRepository = new Repository<Member>("data/members.json");
         }
 
         protected override void Save()

@@ -11,7 +11,7 @@ namespace IPBLibrary.App.RegisterForms
         public FormLibrarian()
         {
             InitializeComponent();
-            _librarianRepository = new Repository<Librarian>("librarians.json");
+            _librarianRepository = new Repository<Librarian>("data/librarians.json");
         }
 
         protected override void Save()

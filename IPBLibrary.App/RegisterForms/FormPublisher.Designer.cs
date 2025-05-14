@@ -184,7 +184,7 @@
             ClientSize = new Size(793, 422);
             Location = new Point(0, 0);
             Name = "FormPublisher";
-            Text = "FormPublisher";
+            Text = "Publisher Register";
             tabPageRegister.ResumeLayout(false);
             tabControlRegister.ResumeLayout(false);
             ResumeLayout(false);

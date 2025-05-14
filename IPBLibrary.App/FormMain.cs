@@ -1,3 +1,4 @@
+using IPBLibrary.App.OperationForms;
 using IPBLibrary.App.RegisterForms;
 using IPBLibrary.Domain.Entities;
 using ReaLTaiizor.Forms;
@@ -6,18 +7,20 @@ namespace IPBLibrary.App
 {
     public partial class FormMain : MaterialForm
     {
-        public Librarian Librarian;
-        public FormMain(Librarian librarian)
+        public Librarian? Librarian;
+
+        public FormMain(Librarian? librarian = null)
         {
             Librarian = librarian;
             InitializeComponent();
-            lblUserName.Text = $@"User Name: {Librarian.Name}";
-            lblUserRole.Text = $@"Role: {Librarian.Role}";
+            lblUserName.Text = $@"User Name: {Librarian?.Name}";
+            lblUserRole.Text = $@"Role: {Librarian?.Role}";
         }
 
         private void authorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using var form = new FormAuthor();
+            //form.MdiParent = this;
             form.ShowDialog();
         }
 
@@ -48,6 +51,24 @@ namespace IPBLibrary.App
         private void publisherToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new FormPublisher();
+            form.ShowDialog();
+        }
+
+        private void bookLoanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormLoan(Librarian);
+            form.ShowDialog();
+        }
+
+        private void bookReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormReservation();
+            form.ShowDialog();
+        }
+
+        private void fineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormFine();
             form.ShowDialog();
         }
     }

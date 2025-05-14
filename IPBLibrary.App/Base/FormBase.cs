@@ -1,7 +1,5 @@
-﻿
-using ReaLTaiizor.Controls;
+﻿using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
-using System.Windows.Forms;
 
 namespace IPBLibrary.App.Base
 {
@@ -16,7 +14,15 @@ namespace IPBLibrary.App.Base
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Save();
+            if (ValidateFields())
+            {
+                Save();
+            }
+        }
+
+        protected virtual bool ValidateFields()
+        {
+            return true;
         }
 
         protected virtual void Save()

@@ -8,6 +8,6 @@
         public Librarian Librarian { get; set; }
         public DateTime LoanDate { get; set; }
         public DateTime? ReturnDate { get; set; }
-        public bool IsReturned => ReturnDate.HasValue;
+        public bool IsReturned { get; set; }
     }
 }

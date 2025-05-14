@@ -11,7 +11,27 @@ namespace IPBLibrary.App.RegisterForms
         public FormPublisher()
         {
             InitializeComponent();
-            _publisherRepository = new Repository<Publisher>("publishers.json");
+            _publisherRepository = new Repository<Publisher>("data/publishers.json");
+        }
+
+        protected override bool ValidateFields()
+        {
+            if(string.IsNullOrWhiteSpace(txtId.Text) || !int.TryParse(txtId.Text, out _))
+            {
+                MessageBox.Show(@"Please enter a valid ID.", @"Validation Error", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtId.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show(@"Please enter the publisher's name.", @"Validation Error", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtName.Focus();
+                return false;
+            }
+            return true;
         }
 
         protected override void Save()
