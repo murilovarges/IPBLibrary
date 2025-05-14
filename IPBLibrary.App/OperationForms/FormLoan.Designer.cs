@@ -85,7 +85,7 @@
             cboMember.Name = "cboMember";
             cboMember.Size = new Size(626, 49);
             cboMember.StartIndex = 0;
-            cboMember.TabIndex = 8;
+            cboMember.TabIndex = 1;
             // 
             // cboBook
             // 
@@ -107,7 +107,7 @@
             cboBook.Name = "cboBook";
             cboBook.Size = new Size(743, 49);
             cboBook.StartIndex = 0;
-            cboBook.TabIndex = 9;
+            cboBook.TabIndex = 2;
             // 
             // dtmLoanDate
             // 
@@ -117,7 +117,7 @@
             dtmLoanDate.MinimumSize = new Size(0, 35);
             dtmLoanDate.Name = "dtmLoanDate";
             dtmLoanDate.Size = new Size(222, 35);
-            dtmLoanDate.TabIndex = 11;
+            dtmLoanDate.TabIndex = 4;
             // 
             // metroLabel1
             // 
@@ -128,7 +128,7 @@
             metroLabel1.Size = new Size(125, 29);
             metroLabel1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel1.StyleManager = null;
-            metroLabel1.TabIndex = 10;
+            metroLabel1.TabIndex = 3;
             metroLabel1.Text = "Loan Date";
             metroLabel1.ThemeAuthor = "Taiizor";
             metroLabel1.ThemeName = "MetroLight";
@@ -141,7 +141,7 @@
             dtmReturnDate.MinimumSize = new Size(0, 35);
             dtmReturnDate.Name = "dtmReturnDate";
             dtmReturnDate.Size = new Size(222, 35);
-            dtmReturnDate.TabIndex = 13;
+            dtmReturnDate.TabIndex = 6;
             // 
             // metroLabel2
             // 
@@ -152,7 +152,7 @@
             metroLabel2.Size = new Size(125, 29);
             metroLabel2.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel2.StyleManager = null;
-            metroLabel2.TabIndex = 12;
+            metroLabel2.TabIndex = 5;
             metroLabel2.Text = "Return Date";
             metroLabel2.ThemeAuthor = "Taiizor";
             metroLabel2.ThemeName = "MetroLight";
@@ -169,7 +169,7 @@
             chkReturned.ReadOnly = false;
             chkReturned.Ripple = true;
             chkReturned.Size = new Size(98, 37);
-            chkReturned.TabIndex = 14;
+            chkReturned.TabIndex = 7;
             chkReturned.Text = "Returned";
             chkReturned.UseAccentColor = false;
             chkReturned.UseVisualStyleBackColor = true;
@@ -195,7 +195,7 @@
             cboLibrarian.Name = "cboLibrarian";
             cboLibrarian.Size = new Size(740, 49);
             cboLibrarian.StartIndex = 0;
-            cboLibrarian.TabIndex = 15;
+            cboLibrarian.TabIndex = 8;
             // 
             // FormLoan
             // 

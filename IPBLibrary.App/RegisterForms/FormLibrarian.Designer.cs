@@ -166,7 +166,7 @@
             dtmDateOfBird.MinimumSize = new Size(0, 35);
             dtmDateOfBird.Name = "dtmDateOfBird";
             dtmDateOfBird.Size = new Size(155, 35);
-            dtmDateOfBird.TabIndex = 6;
+            dtmDateOfBird.TabIndex = 8;
             // 
             // metroLabel1
             // 
@@ -177,7 +177,7 @@
             metroLabel1.Size = new Size(125, 29);
             metroLabel1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel1.StyleManager = null;
-            metroLabel1.TabIndex = 5;
+            metroLabel1.TabIndex = 7;
             metroLabel1.Text = "Date of Birth";
             metroLabel1.ThemeAuthor = "Taiizor";
             metroLabel1.ThemeName = "MetroLight";
@@ -204,7 +204,7 @@
             cmbRole.Name = "cmbRole";
             cmbRole.Size = new Size(416, 49);
             cmbRole.StartIndex = 0;
-            cmbRole.TabIndex = 4;
+            cmbRole.TabIndex = 5;
             // 
             // txtEmployeeNumber
             // 
@@ -231,7 +231,7 @@
             txtEmployeeNumber.SelectionStart = 0;
             txtEmployeeNumber.ShortcutsEnabled = true;
             txtEmployeeNumber.Size = new Size(311, 48);
-            txtEmployeeNumber.TabIndex = 7;
+            txtEmployeeNumber.TabIndex = 4;
             txtEmployeeNumber.TabStop = false;
             txtEmployeeNumber.TextAlign = HorizontalAlignment.Left;
             txtEmployeeNumber.TrailingIcon = null;
@@ -262,7 +262,7 @@
             txtPassword.SelectionStart = 0;
             txtPassword.ShortcutsEnabled = true;
             txtPassword.Size = new Size(571, 48);
-            txtPassword.TabIndex = 8;
+            txtPassword.TabIndex = 6;
             txtPassword.TabStop = false;
             txtPassword.TextAlign = HorizontalAlignment.Left;
             txtPassword.TrailingIcon = null;

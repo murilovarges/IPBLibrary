@@ -33,31 +33,28 @@
             metroLabel1 = new ReaLTaiizor.Controls.MetroLabel();
             txtAmount = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             chbIsPaid = new ReaLTaiizor.Controls.MaterialCheckBox();
-            maskedTextBox1 = new MaskedTextBox();
             tabPageRegister.SuspendLayout();
             tabControlRegister.SuspendLayout();
             SuspendLayout();
             // 
             // tabPageRegister
             // 
-            tabPageRegister.Controls.Add(maskedTextBox1);
             tabPageRegister.Controls.Add(chbIsPaid);
             tabPageRegister.Controls.Add(txtAmount);
             tabPageRegister.Controls.Add(dtmIssuedDate);
             tabPageRegister.Controls.Add(metroLabel1);
             tabPageRegister.Controls.Add(cboMember);
-            tabPageRegister.Size = new Size(758, 350);
+            tabPageRegister.Size = new Size(758, 286);
             tabPageRegister.Controls.SetChildIndex(txtId, 0);
             tabPageRegister.Controls.SetChildIndex(cboMember, 0);
             tabPageRegister.Controls.SetChildIndex(metroLabel1, 0);
             tabPageRegister.Controls.SetChildIndex(dtmIssuedDate, 0);
             tabPageRegister.Controls.SetChildIndex(txtAmount, 0);
             tabPageRegister.Controls.SetChildIndex(chbIsPaid, 0);
-            tabPageRegister.Controls.SetChildIndex(maskedTextBox1, 0);
             // 
             // tabControlRegister
             // 
-            tabControlRegister.Size = new Size(766, 383);
+            tabControlRegister.Size = new Size(766, 319);
             // 
             // cboMember
             // 
@@ -79,7 +76,7 @@
             cboMember.Name = "cboMember";
             cboMember.Size = new Size(626, 49);
             cboMember.StartIndex = 0;
-            cboMember.TabIndex = 8;
+            cboMember.TabIndex = 1;
             // 
             // dtmIssuedDate
             // 
@@ -89,7 +86,7 @@
             dtmIssuedDate.MinimumSize = new Size(0, 35);
             dtmIssuedDate.Name = "dtmIssuedDate";
             dtmIssuedDate.Size = new Size(168, 35);
-            dtmIssuedDate.TabIndex = 11;
+            dtmIssuedDate.TabIndex = 4;
             // 
             // metroLabel1
             // 
@@ -100,7 +97,7 @@
             metroLabel1.Size = new Size(125, 29);
             metroLabel1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel1.StyleManager = null;
-            metroLabel1.TabIndex = 10;
+            metroLabel1.TabIndex = 3;
             metroLabel1.Text = "Issue Date";
             metroLabel1.ThemeAuthor = "Taiizor";
             metroLabel1.ThemeName = "MetroLight";
@@ -121,7 +118,7 @@
             txtAmount.InsertKeyMode = InsertKeyMode.Default;
             txtAmount.LeadingIcon = null;
             txtAmount.Location = new Point(6, 70);
-            txtAmount.Mask = "$\\d{6}.00";
+            txtAmount.Mask = "$ #####9,99";
             txtAmount.MaxLength = 32767;
             txtAmount.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtAmount.Name = "txtAmount";
@@ -135,14 +132,15 @@
             txtAmount.RightToLeft = RightToLeft.No;
             txtAmount.SelectedText = "";
             txtAmount.SelectionLength = 0;
-            txtAmount.SelectionStart = 2;
+            txtAmount.SelectionStart = 0;
             txtAmount.ShortcutsEnabled = true;
             txtAmount.Size = new Size(442, 48);
             txtAmount.SkipLiterals = true;
-            txtAmount.TabIndex = 14;
+            txtAmount.TabIndex = 2;
             txtAmount.TabStop = false;
+            txtAmount.Text = "R$       .";
             txtAmount.TextAlign = HorizontalAlignment.Right;
-            txtAmount.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            txtAmount.TextMaskFormat = MaskFormat.IncludeLiterals;
             txtAmount.TrailingIcon = null;
             txtAmount.UseSystemPasswordChar = false;
             txtAmount.ValidatingType = null;
@@ -159,24 +157,16 @@
             chbIsPaid.ReadOnly = false;
             chbIsPaid.Ripple = true;
             chbIsPaid.Size = new Size(83, 37);
-            chbIsPaid.TabIndex = 15;
+            chbIsPaid.TabIndex = 5;
             chbIsPaid.Text = "Is Paid";
             chbIsPaid.UseAccentColor = false;
             chbIsPaid.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Location = new Point(209, 177);
-            maskedTextBox1.Mask = "$\\d{6}.00";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(125, 27);
-            maskedTextBox1.TabIndex = 16;
             // 
             // FormFine
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(772, 450);
+            ClientSize = new Size(772, 386);
             Location = new Point(0, 0);
             Name = "FormFine";
             Text = "Fine Operation";
@@ -195,6 +185,5 @@
         private ReaLTaiizor.Controls.MetroLabel metroLabel1;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox txtAmount;
         private ReaLTaiizor.Controls.MaterialCheckBox chbIsPaid;
-        private MaskedTextBox maskedTextBox1;
     }
 }

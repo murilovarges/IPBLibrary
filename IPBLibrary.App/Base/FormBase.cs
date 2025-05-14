@@ -22,6 +22,13 @@ namespace IPBLibrary.App.Base
 
         protected virtual bool ValidateFields()
         {
+            if (string.IsNullOrWhiteSpace(txtId.Text) || !int.TryParse(txtId.Text, out _))
+            {
+                MessageBox.Show(@"Please enter a valid ID.", @"Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtId.Focus();
+                return false;
+            }
             return true;
         }
 

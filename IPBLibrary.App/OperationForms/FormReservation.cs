@@ -93,9 +93,9 @@ namespace IPBLibrary.App.OperationForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Reservation reservation)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _reservationRepository.Delete(a => a.Id == reservation.Id);
+                _reservationRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Reservation deleted successfully!", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }

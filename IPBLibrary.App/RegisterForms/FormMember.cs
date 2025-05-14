@@ -77,9 +77,9 @@ namespace IPBLibrary.App.RegisterForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Member member)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _memberRepository.Delete(a => a.Id == member.Id);
+                _memberRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Member deleted successfully!", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

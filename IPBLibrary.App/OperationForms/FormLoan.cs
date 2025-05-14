@@ -110,9 +110,9 @@ namespace IPBLibrary.App.OperationForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Loan loan)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _loanRepository.Delete(a => a.Id == loan.Id);
+                _loanRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Loan deleted successfully!", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }

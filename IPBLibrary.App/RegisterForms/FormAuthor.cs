@@ -76,9 +76,9 @@ namespace IPBLibrary.App.RegisterForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Author author)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _authorRepository.Delete(a => a.Id == author.Id);
+                _authorRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Author deleted successfully!", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

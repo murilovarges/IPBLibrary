@@ -76,9 +76,9 @@ namespace IPBLibrary.App.RegisterForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Librarian librarian)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _librarianRepository.Delete(a => a.Id == librarian.Id);
+                _librarianRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Librarian deleted successfully!", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

@@ -55,7 +55,7 @@
             txtName.BackgroundImageLayout = ImageLayout.None;
             txtName.CharacterCasing = CharacterCasing.Normal;
             txtName.Depth = 0;
-            txtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtName.HideSelection = true;
             txtName.Hint = "Name";
             txtName.LeadingIcon = null;
@@ -72,7 +72,7 @@
             txtName.SelectionStart = 0;
             txtName.ShortcutsEnabled = true;
             txtName.Size = new Size(638, 48);
-            txtName.TabIndex = 2;
+            txtName.TabIndex = 1;
             txtName.TabStop = false;
             txtName.TextAlign = HorizontalAlignment.Left;
             txtName.TrailingIcon = null;
@@ -98,7 +98,7 @@
             txtDescription.SelectionStart = 0;
             txtDescription.ShortcutsEnabled = true;
             txtDescription.Size = new Size(773, 226);
-            txtDescription.TabIndex = 3;
+            txtDescription.TabIndex = 2;
             txtDescription.TabStop = false;
             txtDescription.TextAlign = HorizontalAlignment.Left;
             txtDescription.UseSystemPasswordChar = false;

@@ -79,7 +79,7 @@
             cboMember.Name = "cboMember";
             cboMember.Size = new Size(626, 49);
             cboMember.StartIndex = 0;
-            cboMember.TabIndex = 8;
+            cboMember.TabIndex = 1;
             // 
             // cboBook
             // 
@@ -101,7 +101,7 @@
             cboBook.Name = "cboBook";
             cboBook.Size = new Size(743, 49);
             cboBook.StartIndex = 0;
-            cboBook.TabIndex = 9;
+            cboBook.TabIndex = 2;
             // 
             // dtmReservationDate
             // 
@@ -111,7 +111,7 @@
             dtmReservationDate.MinimumSize = new Size(0, 35);
             dtmReservationDate.Name = "dtmReservationDate";
             dtmReservationDate.Size = new Size(222, 35);
-            dtmReservationDate.TabIndex = 11;
+            dtmReservationDate.TabIndex = 4;
             // 
             // metroLabel1
             // 
@@ -122,7 +122,7 @@
             metroLabel1.Size = new Size(125, 29);
             metroLabel1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel1.StyleManager = null;
-            metroLabel1.TabIndex = 10;
+            metroLabel1.TabIndex = 3;
             metroLabel1.Text = "Reservation Date";
             metroLabel1.ThemeAuthor = "Taiizor";
             metroLabel1.ThemeName = "MetroLight";
@@ -135,7 +135,7 @@
             dtmExpirationDate.MinimumSize = new Size(0, 35);
             dtmExpirationDate.Name = "dtmExpirationDate";
             dtmExpirationDate.Size = new Size(222, 35);
-            dtmExpirationDate.TabIndex = 13;
+            dtmExpirationDate.TabIndex = 6;
             // 
             // metroLabel2
             // 
@@ -146,7 +146,7 @@
             metroLabel2.Size = new Size(125, 29);
             metroLabel2.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             metroLabel2.StyleManager = null;
-            metroLabel2.TabIndex = 12;
+            metroLabel2.TabIndex = 5;
             metroLabel2.Text = "Expiration Date";
             metroLabel2.ThemeAuthor = "Taiizor";
             metroLabel2.ThemeName = "MetroLight";

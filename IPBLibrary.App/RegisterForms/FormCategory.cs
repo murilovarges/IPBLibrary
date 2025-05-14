@@ -59,9 +59,9 @@ namespace IPBLibrary.App.RegisterForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Category category)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _categoryRepository.Delete(a => a.Id == category.Id);
+                _categoryRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Category deleted successfully!", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }

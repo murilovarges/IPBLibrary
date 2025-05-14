@@ -27,14 +27,17 @@ namespace IPBLibrary.App.OperationForms
 
         protected override void Save()
         {
+            var amountStr = txtAmount.Text.Replace("R$", "").Replace(".", ",");
+            decimal.TryParse(amountStr, out var amount);
             var fine = new Fine
             {
                 Id = int.TryParse(txtId.Text, out var id) ? id : 0,
                 Member = _memberRepository.GetById(m => m.Id == int.Parse(cboMember.SelectedValue.ToString())),
+                Amount = amount,
                 IssuedDate = dtmIssuedDate.Value,
                 IsPaid = chbIsPaid.Checked
             };
-            // Verifica se o empréstimo já existe no repositório
+            // Verifica se a multa já existe no repositório
             var existingFine = _fineRepository.GetById(l => l.Id == fine.Id);
             if (existingFine != null)
             {
@@ -62,12 +65,12 @@ namespace IPBLibrary.App.OperationForms
                 Id = fine.Id,
                 IdMember = fine.Member.Id,
                 MemberName = fine.Member.Name,
+                Amount = fine.Amount,
                 IssuedDate = fine.IssuedDate,
                 IsPaid = fine.IsPaid
             }).ToList();
             dataGridViewRegister.DataSource = fineView;
             dataGridViewRegister.Columns["Id"]!.Visible = false; // Hide the Id column
-            dataGridViewRegister.Columns["IdBook"]!.Visible = false; // Hide the Id column
             dataGridViewRegister.Columns["IdMember"]!.Visible = false; // Hide the Id column
         }
 
@@ -81,9 +84,9 @@ namespace IPBLibrary.App.OperationForms
 
         protected override void Delete(DataGridViewRow row)
         {
-            if (row.DataBoundItem is Fine fine)
+            if (int.TryParse(row.Cells["Id"].Value?.ToString(), out int id))
             {
-                _fineRepository.Delete(a => a.Id == fine.Id);
+                _fineRepository.Delete(a => a.Id == id);
                 MessageBox.Show(@"Fine deleted successfully!", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
