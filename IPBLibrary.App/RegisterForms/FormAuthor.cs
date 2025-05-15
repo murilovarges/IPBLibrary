@@ -82,7 +82,5 @@ namespace IPBLibrary.App.RegisterForms
                 MessageBox.Show(@"Author deleted successfully!", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
     }
-
 }

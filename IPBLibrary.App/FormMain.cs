@@ -20,10 +20,9 @@ namespace IPBLibrary.App
         private void authorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using var form = new FormAuthor();
-            //form.MdiParent = this;
             form.ShowDialog();
         }
-
+            
         private void bookCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using var form = new FormCategory();

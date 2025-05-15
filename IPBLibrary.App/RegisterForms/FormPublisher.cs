@@ -44,7 +44,7 @@ namespace IPBLibrary.App.RegisterForms
                 Email = txtEmail.Text,
                 ContactNumber = txtContactNumber.Text
             };
-            // Verifica se a publisher já existe no repositório
+            // Verifica se a editora já existe no repositório
             var existingPublisher = _publisherRepository.GetById(c => c.Id == publisher.Id);
             if (existingPublisher != null)
             {

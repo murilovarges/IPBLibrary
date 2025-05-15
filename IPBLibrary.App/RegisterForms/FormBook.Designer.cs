@@ -35,35 +35,38 @@ namespace IPBLibrary.App.RegisterForms
             txtISBN = new MaterialTextBoxEdit();
             txtGenre = new MaterialTextBoxEdit();
             dtmPublishedDate = new PoisonDateTime();
-            cmbAuthor = new MaterialComboBox();
-            cmbCategory = new MaterialComboBox();
+            cboAuthor = new MaterialComboBox();
+            cboCategory = new MaterialComboBox();
             metroLabel1 = new MetroLabel();
+            cboPublisher = new MaterialComboBox();
             tabPageRegister.SuspendLayout();
             tabControlRegister.SuspendLayout();
             SuspendLayout();
             // 
             // tabPageRegister
             // 
+            tabPageRegister.Controls.Add(cboPublisher);
             tabPageRegister.Controls.Add(txtTitle);
             tabPageRegister.Controls.Add(txtISBN);
             tabPageRegister.Controls.Add(txtGenre);
             tabPageRegister.Controls.Add(dtmPublishedDate);
-            tabPageRegister.Controls.Add(cmbAuthor);
-            tabPageRegister.Controls.Add(cmbCategory);
+            tabPageRegister.Controls.Add(cboAuthor);
+            tabPageRegister.Controls.Add(cboCategory);
             tabPageRegister.Controls.Add(metroLabel1);
-            tabPageRegister.Size = new Size(774, 307);
+            tabPageRegister.Size = new Size(774, 400);
             tabPageRegister.Controls.SetChildIndex(metroLabel1, 0);
-            tabPageRegister.Controls.SetChildIndex(cmbCategory, 0);
-            tabPageRegister.Controls.SetChildIndex(cmbAuthor, 0);
+            tabPageRegister.Controls.SetChildIndex(cboCategory, 0);
+            tabPageRegister.Controls.SetChildIndex(cboAuthor, 0);
             tabPageRegister.Controls.SetChildIndex(dtmPublishedDate, 0);
             tabPageRegister.Controls.SetChildIndex(txtGenre, 0);
             tabPageRegister.Controls.SetChildIndex(txtISBN, 0);
             tabPageRegister.Controls.SetChildIndex(txtTitle, 0);
             tabPageRegister.Controls.SetChildIndex(txtId, 0);
+            tabPageRegister.Controls.SetChildIndex(cboPublisher, 0);
             // 
             // tabControlRegister
             // 
-            tabControlRegister.Size = new Size(782, 340);
+            tabControlRegister.Size = new Size(782, 433);
             // 
             // txtTitle
             // 
@@ -162,55 +165,55 @@ namespace IPBLibrary.App.RegisterForms
             // 
             dtmPublishedDate.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Tall;
             dtmPublishedDate.Format = DateTimePickerFormat.Short;
-            dtmPublishedDate.Location = new Point(3, 87);
+            dtmPublishedDate.Location = new Point(6, 87);
             dtmPublishedDate.MinimumSize = new Size(0, 35);
             dtmPublishedDate.Name = "dtmPublishedDate";
-            dtmPublishedDate.Size = new Size(222, 35);
+            dtmPublishedDate.Size = new Size(219, 35);
             dtmPublishedDate.TabIndex = 4;
             // 
-            // cmbAuthor
+            // cboAuthor
             // 
-            cmbAuthor.AutoResize = false;
-            cmbAuthor.BackColor = Color.FromArgb(255, 255, 255);
-            cmbAuthor.Depth = 0;
-            cmbAuthor.DrawMode = DrawMode.OwnerDrawVariable;
-            cmbAuthor.DropDownHeight = 174;
-            cmbAuthor.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAuthor.DropDownWidth = 121;
-            cmbAuthor.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            cmbAuthor.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            cmbAuthor.Hint = "Author";
-            cmbAuthor.IntegralHeight = false;
-            cmbAuthor.ItemHeight = 43;
-            cmbAuthor.Location = new Point(6, 132);
-            cmbAuthor.MaxDropDownItems = 4;
-            cmbAuthor.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            cmbAuthor.Name = "cmbAuthor";
-            cmbAuthor.Size = new Size(758, 49);
-            cmbAuthor.StartIndex = 0;
-            cmbAuthor.TabIndex = 6;
+            cboAuthor.AutoResize = false;
+            cboAuthor.BackColor = Color.FromArgb(255, 255, 255);
+            cboAuthor.Depth = 0;
+            cboAuthor.DrawMode = DrawMode.OwnerDrawVariable;
+            cboAuthor.DropDownHeight = 174;
+            cboAuthor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAuthor.DropDownWidth = 121;
+            cboAuthor.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboAuthor.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboAuthor.Hint = "Author";
+            cboAuthor.IntegralHeight = false;
+            cboAuthor.ItemHeight = 43;
+            cboAuthor.Location = new Point(6, 132);
+            cboAuthor.MaxDropDownItems = 4;
+            cboAuthor.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboAuthor.Name = "cboAuthor";
+            cboAuthor.Size = new Size(758, 49);
+            cboAuthor.StartIndex = 0;
+            cboAuthor.TabIndex = 6;
             // 
-            // cmbCategory
+            // cboCategory
             // 
-            cmbCategory.AutoResize = false;
-            cmbCategory.BackColor = Color.FromArgb(255, 255, 255);
-            cmbCategory.Depth = 0;
-            cmbCategory.DrawMode = DrawMode.OwnerDrawVariable;
-            cmbCategory.DropDownHeight = 174;
-            cmbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbCategory.DropDownWidth = 121;
-            cmbCategory.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            cmbCategory.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            cmbCategory.Hint = "Category";
-            cmbCategory.IntegralHeight = false;
-            cmbCategory.ItemHeight = 43;
-            cmbCategory.Location = new Point(6, 187);
-            cmbCategory.MaxDropDownItems = 4;
-            cmbCategory.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(758, 49);
-            cmbCategory.StartIndex = 0;
-            cmbCategory.TabIndex = 7;
+            cboCategory.AutoResize = false;
+            cboCategory.BackColor = Color.FromArgb(255, 255, 255);
+            cboCategory.Depth = 0;
+            cboCategory.DrawMode = DrawMode.OwnerDrawVariable;
+            cboCategory.DropDownHeight = 174;
+            cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCategory.DropDownWidth = 121;
+            cboCategory.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboCategory.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboCategory.Hint = "Category";
+            cboCategory.IntegralHeight = false;
+            cboCategory.ItemHeight = 43;
+            cboCategory.Location = new Point(6, 246);
+            cboCategory.MaxDropDownItems = 4;
+            cboCategory.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboCategory.Name = "cboCategory";
+            cboCategory.Size = new Size(758, 49);
+            cboCategory.StartIndex = 0;
+            cboCategory.TabIndex = 8;
             // 
             // metroLabel1
             // 
@@ -226,11 +229,33 @@ namespace IPBLibrary.App.RegisterForms
             metroLabel1.ThemeAuthor = "Taiizor";
             metroLabel1.ThemeName = "MetroLight";
             // 
+            // cboPublisher
+            // 
+            cboPublisher.AutoResize = false;
+            cboPublisher.BackColor = Color.FromArgb(255, 255, 255);
+            cboPublisher.Depth = 0;
+            cboPublisher.DrawMode = DrawMode.OwnerDrawVariable;
+            cboPublisher.DropDownHeight = 174;
+            cboPublisher.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboPublisher.DropDownWidth = 121;
+            cboPublisher.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboPublisher.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboPublisher.Hint = "Publisher";
+            cboPublisher.IntegralHeight = false;
+            cboPublisher.ItemHeight = 43;
+            cboPublisher.Location = new Point(6, 187);
+            cboPublisher.MaxDropDownItems = 4;
+            cboPublisher.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboPublisher.Name = "cboPublisher";
+            cboPublisher.Size = new Size(758, 49);
+            cboPublisher.StartIndex = 0;
+            cboPublisher.TabIndex = 7;
+            // 
             // FormBook
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(788, 407);
+            ClientSize = new Size(788, 500);
             Location = new Point(0, 0);
             Name = "FormBook";
             Text = "Book Register";
@@ -245,8 +270,9 @@ namespace IPBLibrary.App.RegisterForms
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtISBN;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtGenre;
         private PoisonDateTime dtmPublishedDate;
-        private MaterialComboBox cmbAuthor;
-        private MaterialComboBox cmbCategory;
+        private MaterialComboBox cboAuthor;
+        private MaterialComboBox cboCategory;
         private MetroLabel metroLabel1;
+        private MaterialComboBox cboPublisher;
     }
 }
