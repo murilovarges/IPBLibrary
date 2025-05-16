@@ -1,5 +1,4 @@
-﻿
-using IPBLibrary.App.Base;
+﻿using IPBLibrary.App.Base;
 using IPBLibrary.Domain.Entities;
 using IPBLibrary.Repository;
 
@@ -77,19 +76,19 @@ namespace IPBLibrary.App.RegisterForms
         protected override void LoadList()
         {
             var books = _bookRepository.GetAll();
-            var bookView = books.Select(loan => new
+            var bookView = books.Select(book => new
             {
-                Id = loan.Id,
-                Title = loan.Title,
-                ISBN = loan.ISBN,
-                PublishedDate = loan.PublishedDate.ToString("dd/MM/yyyy"),
-                Genre = loan.Genre,
-                IdAuthor = loan.Author.Id,
-                AuthorName = loan.Author.Name,
-                IdPublisher = loan.Publisher?.Id,
-                PublisherName = loan.Publisher?.Name,
-                IdCategory = loan.Category.Id,
-                CategoryName = loan.Category.Name
+                Id = book.Id,
+                Title = book.Title,
+                ISBN = book.ISBN,
+                PublishedDate = book.PublishedDate.ToString("dd/MM/yyyy"),
+                Genre = book.Genre,
+                IdAuthor = book.Author.Id,
+                AuthorName = book.Author.Name,
+                IdPublisher = book.Publisher?.Id,
+                PublisherName = book.Publisher?.Name,
+                IdCategory = book.Category.Id,
+                CategoryName = book.Category.Name
 
 
             }).ToList();
