@@ -25,10 +25,10 @@ namespace IPBLibrary.App.RegisterForms
                 DateOfBirth = dtmDateOfBird.Value,
                 MembershipStartDate = dtmStartDate.Value,
                 MembershipEndDate = dtmEndDate.Value,
-                Role = cmbRole.Text
+                Role = cboRole.Text
             };
 
-            // Verifica se o mebro já existe no repositório
+            // Verifica se o membro já existe no repositório
             var existingMember = _memberRepository.GetById(a => a.Id == member.Id);
 
             if (existingMember != null)
@@ -67,7 +67,7 @@ namespace IPBLibrary.App.RegisterForms
                 dtmDateOfBird.Value = member.DateOfBirth;
                 dtmStartDate.Value = member.MembershipStartDate;
                 dtmEndDate.Value = member.MembershipEndDate ?? DateTime.Now; // Handle nullable DateTime  
-                cmbRole.Text = member.Role;
+                cboRole.Text = member.Role;
             }
             else
             {
@@ -85,5 +85,4 @@ namespace IPBLibrary.App.RegisterForms
         }
 
     }
-
 }

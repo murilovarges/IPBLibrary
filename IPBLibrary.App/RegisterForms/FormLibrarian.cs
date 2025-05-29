@@ -23,7 +23,7 @@ namespace IPBLibrary.App.RegisterForms
                 Email = txtEmail.Text,
                 PhoneNumber = txtPhone.Text,
                 DateOfBirth = dtmDateOfBird.Value,
-                Role = cmbRole.Text,
+                Role = cboRole.Text,
                 Password = txtPassword.Text,
                 EmployeeNumber = txtEmployeeNumber.Text
             };
@@ -64,7 +64,7 @@ namespace IPBLibrary.App.RegisterForms
                 txtEmail.Text = librarian.Email;
                 txtPhone.Text = librarian.PhoneNumber;
                 dtmDateOfBird.Value = librarian.DateOfBirth;
-                cmbRole.Text = librarian.Role;
+                cboRole.Text = librarian.Role;
                 txtPassword.Text = librarian.Password;
                 txtEmployeeNumber.Text = librarian.EmployeeNumber;
             }

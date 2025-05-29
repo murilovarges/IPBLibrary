@@ -37,14 +37,14 @@
             metroLabel2 = new ReaLTaiizor.Controls.MetroLabel();
             dtmEndDate = new ReaLTaiizor.Controls.PoisonDateTime();
             metroLabel3 = new ReaLTaiizor.Controls.MetroLabel();
-            cmbRole = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboRole = new ReaLTaiizor.Controls.MaterialComboBox();
             tabPageRegister.SuspendLayout();
             tabControlRegister.SuspendLayout();
             SuspendLayout();
             // 
             // tabPageRegister
             // 
-            tabPageRegister.Controls.Add(cmbRole);
+            tabPageRegister.Controls.Add(cboRole);
             tabPageRegister.Controls.Add(dtmEndDate);
             tabPageRegister.Controls.Add(metroLabel3);
             tabPageRegister.Controls.Add(dtmStartDate);
@@ -65,7 +65,7 @@
             tabPageRegister.Controls.SetChildIndex(dtmStartDate, 0);
             tabPageRegister.Controls.SetChildIndex(metroLabel3, 0);
             tabPageRegister.Controls.SetChildIndex(dtmEndDate, 0);
-            tabPageRegister.Controls.SetChildIndex(cmbRole, 0);
+            tabPageRegister.Controls.SetChildIndex(cboRole, 0);
             // 
             // tabControlRegister
             // 
@@ -236,29 +236,29 @@
             metroLabel3.ThemeAuthor = "Taiizor";
             metroLabel3.ThemeName = "MetroLight";
             // 
-            // cmbRole
+            // cboRole
             // 
-            cmbRole.AutoResize = false;
-            cmbRole.BackColor = Color.FromArgb(255, 255, 255);
-            cmbRole.Depth = 0;
-            cmbRole.DrawMode = DrawMode.OwnerDrawVariable;
-            cmbRole.DropDownHeight = 174;
-            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRole.DropDownWidth = 121;
-            cmbRole.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            cmbRole.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            cmbRole.FormattingEnabled = true;
-            cmbRole.Hint = "Role";
-            cmbRole.IntegralHeight = false;
-            cmbRole.ItemHeight = 43;
-            cmbRole.Items.AddRange(new object[] { "Student", "Professor", "Employee", "Others" });
-            cmbRole.Location = new Point(6, 221);
-            cmbRole.MaxDropDownItems = 4;
-            cmbRole.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(733, 49);
-            cmbRole.StartIndex = 0;
-            cmbRole.TabIndex = 10;
+            cboRole.AutoResize = false;
+            cboRole.BackColor = Color.FromArgb(255, 255, 255);
+            cboRole.Depth = 0;
+            cboRole.DrawMode = DrawMode.OwnerDrawVariable;
+            cboRole.DropDownHeight = 174;
+            cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRole.DropDownWidth = 121;
+            cboRole.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboRole.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboRole.FormattingEnabled = true;
+            cboRole.Hint = "Role";
+            cboRole.IntegralHeight = false;
+            cboRole.ItemHeight = 43;
+            cboRole.Items.AddRange(new object[] { "Student", "Professor", "Employee", "Others" });
+            cboRole.Location = new Point(6, 221);
+            cboRole.MaxDropDownItems = 4;
+            cboRole.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboRole.Name = "cboRole";
+            cboRole.Size = new Size(733, 49);
+            cboRole.StartIndex = 0;
+            cboRole.TabIndex = 10;
             // 
             // FormMember
             // 
@@ -284,6 +284,6 @@
         private ReaLTaiizor.Controls.MetroLabel metroLabel3;
         private ReaLTaiizor.Controls.PoisonDateTime dtmStartDate;
         private ReaLTaiizor.Controls.MetroLabel metroLabel2;
-        private ReaLTaiizor.Controls.MaterialComboBox cmbRole;
+        private ReaLTaiizor.Controls.MaterialComboBox cboRole;
     }
 }

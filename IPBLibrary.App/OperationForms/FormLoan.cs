@@ -1,5 +1,4 @@
-﻿
-using IPBLibrary.App.Base;
+﻿using IPBLibrary.App.Base;
 using IPBLibrary.Domain.Entities;
 using IPBLibrary.Repository;
 

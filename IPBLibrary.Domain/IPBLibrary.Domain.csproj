@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<!-- Project Developed By Professor Dr. Murilo Varges da Silva -->
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>Project Developed By Professor Dr. Murilo Varges da Silva</Description>
   </PropertyGroup>
 
 </Project>

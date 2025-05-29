@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
+# Project Developed By Professor Dr. Murilo Varges da Silva	
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPBLibrary.Domain", "IPBLibrary.Domain\IPBLibrary.Domain.csproj", "{EA8B3467-DE51-4560-A632-B006477C6B5E}"
