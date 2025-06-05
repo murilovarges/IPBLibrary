@@ -60,8 +60,6 @@ namespace IPBLibrary.App.RegisterForms
                 MessageBox.Show(@"Publisher saved successfully!", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-
-
             tabControlRegister.SelectedTab = tabPageList;
         }
 

@@ -10,7 +10,7 @@ namespace IPBLibrary.App
         public FormLogin()
         {
             InitializeComponent();
-            _librarianRepository = new Repository<Librarian>("librarians.json");
+            _librarianRepository = new Repository<Librarian>("data/librarians.json");
 #if DEBUG
             txtEmail.Text = @"admin@ipb.pt";
             txtPassword.Text = @"admin";

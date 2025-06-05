@@ -34,7 +34,6 @@ namespace IPBLibrary.App.RegisterForms
             if (existingMember != null)
             {
                 // Atualiza o registro existente
-                var existingAuthor = _memberRepository.GetById(a => a.Id == member.Id);
                 _memberRepository.Update(a => a.Id == member.Id, member);
                 MessageBox.Show(@"Member updated successfully!", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -71,7 +70,7 @@ namespace IPBLibrary.App.RegisterForms
             }
             else
             {
-                MessageBox.Show(@"Please select a valid author.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"Please select a valid member.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
